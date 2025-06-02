@@ -31,7 +31,7 @@ const App = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/download",
+        `${process.env.REACT_APP_API_URL}`,
         { url, format },
         {
           responseType: "blob",
