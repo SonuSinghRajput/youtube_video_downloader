@@ -7,6 +7,7 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 app.use(express.json());
+require('dotenv').config();
 
 const ffmpegPath = require('ffmpeg-static');
 process.env.PATH = `${path.dirname(ffmpegPath)}${path.delimiter}${process.env.PATH}`;
